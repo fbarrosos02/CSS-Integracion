@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 135%; /* Más espacio inicial */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Inicia más abajo */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Sube al lugar correcto */
+}
+
+    </style>
+</head>
+<body>
+    <div class="tooltip">Inicio
+        <span class="tooltip-text">Ir a la página principal</span>
+      </div>
+      <div class="tooltip">Sobre mí
+        <span class="tooltip-text">Más información sobre mí</span>
+      </div>
+      <div class="tooltip">Servicios
+        <span class="tooltip-text">Conoce nuestros servicios</span>
+      </div>
+      <div class="tooltip">Contacto
+        <span class="tooltip-text">Ponte en contacto con nosotros</span>
+      </div>
+      
+</body>
+</html>
